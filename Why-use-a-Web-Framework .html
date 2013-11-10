@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Why use a Web Framework?</title>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Why use a Web Framework?</h1>
+    </div>
+    <br>
+    You might be wondering why you need a web framework at all? After
+    all, it just adds complexity and bureaucracy. You are a uber-nerd.
+    If you want a web framework, you can write you own, dammnit!<br>
+    <br>
+    <h2>How hard can it be to write your own framework?</h2>
+    <p>It's simple, isn't it? You need a login mechanism? Simple, you
+      make your own. Including your own encryption function:<br>
+    </p>
+    <p><tt>def encrypt(input):</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp;&nbsp; password = random_garbage +
+        input + more_random_garbage</tt></p>
+    <p><tt>&nbsp;&nbsp;&nbsp; do_some_magic(password)</tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp; </tt><tt><br>
+      </tt><tt>&nbsp;&nbsp;&nbsp; password = password + "kitty"&nbsp; #
+        Add the word 'kitty' to the end of the password, to make it
+        harder to hack</tt><tt><br>
+      </tt></p>
+    <p><tt>&nbsp;&nbsp;&nbsp; return password</tt><br>
+    </p>
+    <pre><code>summon_cthulhu();</code></pre>
+    <p><br>
+      There you go. A perfect, unhackable system, especially if you keep
+      the code secret. (If you didn't get the joke, I'm referencing this
+      post:
+      http://security.stackexchange.com/questions/25585/is-my-developers-home-brew-password-security-right-or-wrong-and-why).
+
+
+      Except my scheme is better, because I add kitties to the password,
+      to make it even more unhackable.<br>
+    </p>
+    <div align="center"><img alt="image of hacker kitty"
+        src="hacker-kitty.png" height="318" width="452"><br>
+      <br>
+      <div align="left"><br>
+        <b>Databases</b><br>
+        <br>
+        What databases? They are a pain in the rear end. Just a simple
+        text file. Or two files. Usernames.txt and passwords.txt. Your
+        passwords are already kitty-protected, so it's not like you can
+        be hacked or anything?<br>
+        <br>
+        <h2>Reasons to use a web framework</h2>
+        <p>Frameworks provide you with several useful features:<br>
+        </p>
+        <p>1. Url redirection: So that when the user goes to <i>yourwebsite.com/kitty</i>,
+          the server knows it must run the script<i> kitty.py</i>.</p>
+        <p>2. Authentication: A simple way to determine if users have
+          logged in. May also allow you to set cookies, so you can <s>spam
+            you users</s> show them meaningful and spiritual ads that
+          will enrich their lives.<br>
+        </p>
+        <p>3. Support for databases: At the minimum, you will have a
+          database of usernames, right?<br>
+        </p>
+        <p>4. Security: Framework designers know most of the security
+          attacks, and will have build safeguards in the framework.
+          There might still be holes, but as long as the framework is
+          open source, you know they will be found and fixed (someday).<br>
+        </p>
+        <p><br>
+        </p>
+        <h2>The real problem with frameworks</h2>
+        <p>So lets come to the real problem you don't use frameworks:
+          They are big, bloated, ugly and very hard to use (I'm looking
+          at you Django. I recently read a long tutorial, at the end of
+          which the author said 'Now you can understand the official
+          Django tutorial').<br>
+        </p>
+        <p>Not only are many frame works hard to start with, they have a
+          lot of baggage and "magic". If you want to do anything even
+          slightly different from the "approved" way, you have to ump
+          through a lot of hoops, and go digging into the dark innards
+          of the documentation, written for version 0.01, and never
+          updated since. You might wonder, why is this done this way?
+          The answer is, usually, cause they say so. And you can't blame
+          the designers. In many cases, they are aware of the problems.
+          But due to historical reasons, and backward compatibility, you
+          are stuck with the decisions made by someone sitting drunk in
+          his underwear (isn't that how most web frameworks and
+          programming languages designed? I dare you to prove me wrong).<br>
+        </p>
+        <p>But it doesn't have to be this way. You don't need to use
+          huge ugly frameworks. Instead, you can use micro
+          frameworks,&nbsp; which allow you to bring in what you need,
+          rather than what someone five years ago thought you might need
+          today. In Python, the most famous micro framework is Flask. In
+          a later blog, I will look at Flask vs Django.<br>
+        </p>
+        <h2> </h2>
+      </div>
+    </div>
+  </body>
+</html>
