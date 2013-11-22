@@ -158,6 +158,323 @@
     "Who are you?" you ask.<br>
     <br>
     "Why, I am a cow, of course," says the Moo-Inator. "I come from the
-    future. Zombie bankers have destroyed <br>
+    future. Zombie bankers have destroyed&nbsp; &lt;&lt;add story.
+    chosen one like hp. must save the future using power of python. He
+    is a geek.&gt;&gt;<br>
+    <br>
+    <br>
+    <br>
+    "We need to find all the greedy bankers in the country. Do you know
+    them?"<br>
+    <br>
+    You look at the cow like its gone crazy. "You jokin' right?"<br>
+    <br>
+    But the cow is serious. "Surely there can be no more than a dozen
+    greedy bankers in the country?"<br>
+    <br>
+    You shake your head and wonder what century the cow is from. "There
+    are ten thousand greedy bankers in this city alone."<br>
+    <br>
+    "Tell me the names of a few of them."<br>
+    <br>
+    <br>
+    Right folks. Coding time. You need to take five names from the user.
+    Because&nbsp; a talking cow from the future told you. Seriously,
+    when did you last visit your psychiatrist? <br>
+    <br>
+    So, let me show you how not to do it:<br>
+    <br>
+    &gt;&gt;&gt; raw_input("Please enter name 1")<br>
+    Please enter name 1Jackass<br>
+    'Jackass'<br>
+    &gt;&gt;&gt; raw_input("Please enter name 2")<br>
+    Please enter name 2Greedy Pig<br>
+    'Greedy Pig'<br>
+    <br>
+    That's a bit tiring, isn't it? Try this:<br>
+    <br>
+    &gt;&gt;&gt; nameList = []<br>
+    <br>
+    nameList is now an&nbsp; empty list. We will store our names in it.<br>
+    <br>
+    &gt;&gt;&gt; for i in range(5):<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; name =
+    raw_input("Please enter name: ")<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+    nameList.append(name)<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Please enter name: Jackass<br>
+    Please enter name: Greedy Pig<br>
+    Please enter name: 1Banker1<br>
+    Please enter name: Some Dude<br>
+    Please enter name: KILLER QUEEN<br>
+    <br>
+    <br>
+    Again, remember to ident the code below the for loop. Let's go over
+    the lines one by one. Feel free to skip if you have done programming
+    before, and know what a for loop is.<br>
+    <br>
+    <br>
+    &gt;&gt;&gt; for i in range(5):<br>
+    <br>
+    The for loop allows us to run the same code multiple times. We have
+    already seen the range() function, which generates&nbsp; a range of
+    numbers from 0 to 4 (hence five numbers). The for loop says we need
+    to run the code below 5 times. The ‘i’ is just a variable. You can
+    call it anything. LoopCounter, Pizzas, or CowDung. Don’t believe me?
+    <p style="-qt-paragraph-type:empty; margin-top:0px;
+      margin-bottom:0px; margin-left:0px; margin-right:0px;
+      -qt-block-indent:0; text-indent:0px;"><br>
+    </p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">&gt;&gt;&gt;
+      for CowDung in range(5):</p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;"> print
+      "Yes sir, this is cow dung"</p>
+    <p style="-qt-paragraph-type:empty; margin-top:0px;
+      margin-bottom:0px; margin-left:0px; margin-right:0px;
+      -qt-block-indent:0; text-indent:0px;"><br>
+    </p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;"> </p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">Yes sir,
+      this is cow dung</p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">Yes sir,
+      this is cow dung</p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">Yes sir,
+      this is cow dung</p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">Yes sir,
+      this is cow dung</p>
+    <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
+      margin-right:0px; -qt-block-indent:0; text-indent:0px;">Yes sir,
+      this is cow dung</p>
+    <p style="-qt-paragraph-type:empty; margin-top:0px;
+      margin-bottom:0px; margin-left:0px; margin-right:0px;
+      -qt-block-indent:0; text-indent:0px;"><br>
+    </p>
+    The actual variable can be used, as we will see later. Coming back
+    to our code, the second line :<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; name =
+    raw_input("Please enter name: ")<br>
+    <br>
+    We already know what this is. We are reading the name from the user,
+    and storing it in a variable called name.<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+    nameList.append(name)<br>
+    <br>
+    Remember the list called nameList we created? It was empty to start
+    with. We now add the name we just read to it. Once you are done with
+    the names, you can print them out:<br>
+    <br>
+    &gt;&gt;&gt; nameList<br>
+    ['Jackass', 'Greedy Pig', '1Banker1', 'Some Dude', 'KILLER QUEEN']<br>
+    <br>
+    Of course, that isn't the proper way to print names. It only works
+    because we are in a debug shell. If this was live code, this might
+    not work. The proper way to print the names is:<br>
+    <br>
+    &gt;&gt;&gt; for name in nameList:<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print name<br>
+    <br>
+    Jackass<br>
+    Greedy Pig<br>
+    1Banker1<br>
+    Some Dude<br>
+    KILLER QUEEN<br>
+    <br>
+    &gt;&gt;&gt; for name in nameList:<br>
+    <br>
+    name is a variable we are using. Again, we could call it anything.
+    This loop says, for each name stored in nameList,<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; print name<br>
+    <br>
+    Print that name.<br>
+    <br>
+    Your turn. Type this code in, and enter five names. Just make sure
+    the third name is "1Banker1", and the last name is in ALL CAPS.<br>
+    <br>
+    There are many ways to work with our list. I have shown you one way
+    (using a for loop) above. But you can also access each element. Our
+    list contains five names. As I said earlier, in Python, the numbers
+    start from zero. So the first name is at position zero in the list.
+    What does that mean? Type this:<br>
+    <br>
+    &gt;&gt;&gt; nameList[0]<br>
+    'Jackass'<br>
+    <br>
+    So if we want to see the second name, we have to type<br>
+    <br>
+    &gt;&gt;&gt; nameList[1]<br>
+    'Greedy Pig'<br>
+    <br>
+    Let's look at the last name now.<br>
+    <br>
+    &gt;&gt;&gt; nameList[4]<br>
+    'KILLER QUEEN'<br>
+    <br>
+    This is in all caps, which is considered shouting. Well, why don't
+    we fix it? Python gives us several inbuilt tools to work with
+    strings.<br>
+    <br>
+    Side Note: What's a string?<br>
+    <br>
+    In Python, string is a type of a variable, usually used to store
+    names, addresses etc. Anything declared with quotes, " or ', becomes
+    a string.<br>
+    <br>
+    &gt;&gt;&gt; "This is a string"<br>
+    'This is a string'<br>
+    &gt;&gt;&gt; 'So is this'<br>
+    'So is this'<br>
+    &gt;&gt;&gt; Not a string<br>
+    SyntaxError: invalid syntax<br>
+    <br>
+    In the last example, Python is complaining because we have not
+    enclosed the sentence within quotes (" "), so Python thinks its an
+    instruction, and tries to execute it.<br>
+    <br>
+    String is the most popular type in Python, and used a lot.<br>
+    <br>
+    <br>
+    Coming back to our example, we could manually fix our all caps, but
+    why should we, when Python will do that for us? There are a large
+    number of inbuilt functions for strings, and we will use them
+    instead:<br>
+    <br>
+    &gt;&gt;&gt; nameList[4].lower()<br>
+    'killer queen'<br>
+    <br>
+    The lower() function converts a string to lower case. We can call it
+    on any string.<br>
+    <br>
+    &gt;&gt;&gt; "I AM ALL CAPS"<br>
+    'I AM ALL CAPS'<br>
+    &gt;&gt;&gt; "I AM NOT CAPS".lower()<br>
+    'i am not caps'<br>
+    <br>
+    But lower case isn't good enough for us. Most names have the first
+    word capitalised. I wonder if that is possible?<br>
+    <br>
+    &gt;&gt;&gt; nameList[4].title()<br>
+    'Killer Queen'<br>
+    <br>
+    Now we got it. The title() function converts string to the proper
+    format for names, so the first letter is capital. How do we update
+    the array? Simples.<br>
+    <br>
+    &gt;&gt;&gt; nameList[4] = nameList[4].title()<br>
+    &gt;&gt;&gt; nameList<br>
+    ['Jackass', 'Greedy Pig', '1Banker1', 'Some Dude', 'Killer Queen']<br>
+    <br>
+    <br>
+    We still have a problem. Our middle name has extra '1's in it, that
+    we typed in by mistake. Luckily, we can remove it easily:<br>
+    <br>
+    &gt;&gt;&gt; "1banker1".strip("1")<br>
+    'banker'<br>
+    <br>
+    The strip() function is actually used to remove whitespace. Imagine
+    you read a name from a file:<br>
+    <br>
+    &gt;&gt;&gt; "&nbsp;&nbsp;&nbsp; Mr James T
+    Sharphorn&nbsp;&nbsp;&nbsp;&nbsp; "<br>
+    '&nbsp;&nbsp;&nbsp; Mr James T Sharphorn&nbsp;&nbsp;&nbsp;&nbsp; '<br>
+    <br>
+    There is a lot of space of the beginning and end of the name,&nbsp;
+    which we don't want to store. Strip will strip the space for us. By
+    default, the strip() function removes empty space:<br>
+    <br>
+    &gt;&gt;&gt; "&nbsp;&nbsp;&nbsp; Mr James T
+    Sharphorn&nbsp;&nbsp;&nbsp;&nbsp; ".strip()<br>
+    'Mr James T Sharphorn'<br>
+    <br>
+    The only problem is that strip() only works at the start and end of
+    the string. So if you had "ban1ker", it would not work. There are
+    other ways around that, which we will see later.<br>
+    <br>
+    <br>
+    <b>A string is also a list</b><br>
+    <br>
+    This may come across as a surprise to you, unless you started
+    programming in the 60s, and look like this:<br>
+    <br>
+    &lt;Kernigham foto&gt;<br>
+    <br>
+    Due to historical reason, a string is also a list. What does that
+    mean? Let's look at our original list:<br>
+    <br>
+    &gt;&gt;&gt; for name in nameList:<br>
+    &nbsp;&nbsp;&nbsp; print name<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Jackass<br>
+    Greedy Pig<br>
+    1Banker1<br>
+    Some Dude<br>
+    Killer Queen<br>
+    <br>
+    <br>
+    This is how you print a list, as we have seen. But we can do the
+    same for a string.<br>
+    <br>
+    &gt;&gt;&gt; myName = "I am Henry the Eight I am!"<br>
+    &gt;&gt;&gt; myName<br>
+    'I am Henry the Eight I am!'<br>
+    <br>
+    So far, so good.<br>
+    <br>
+    &gt;&gt;&gt; for n in myName:<br>
+    &nbsp;&nbsp;&nbsp; print n<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    I<br>
+    &nbsp;<br>
+    a<br>
+    m<br>
+    &nbsp;<br>
+    H<br>
+    e<br>
+    n<br>
+    r<br>
+    y<br>
+    &nbsp;<br>
+    t<br>
+    h<br>
+    e<br>
+    &nbsp;<br>
+    E<br>
+    i<br>
+    g<br>
+    h<br>
+    t<br>
+    &nbsp;<br>
+    I<br>
+    &nbsp;<br>
+    a<br>
+    m<br>
+    !<br>
+    <br>
+    As you can see, Python treats your string as a list, and allows you
+    to print each character individually. This will come in useful
+    later.<br>
+    <br>
+    <br>
+    <b>Advanced Strings</b><br>
+    <br>
+    split() and join&nbsp; - find good stories<br>
+    find, replace, formatted string<br>
+    <b><br>
+    </b><b>Advanced Array</b><br>
+    <br>
+    <br>
   </body>
 </html>
