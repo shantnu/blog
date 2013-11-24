@@ -229,6 +229,9 @@
     </p>
     <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
       margin-right:0px; -qt-block-indent:0; text-indent:0px;">&gt;&gt;&gt;
+
+
+
       for CowDung in range(5):</p>
     <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px;
       margin-right:0px; -qt-block-indent:0; text-indent:0px;"> print
@@ -473,8 +476,600 @@
     split() and join&nbsp; - find good stories<br>
     find, replace, formatted string<br>
     <b><br>
+    </b>&gt;&gt;&gt; sentence = "Say, what's wrong with Donkey? I can
+    hear him braying."<br>
+    &gt;&gt;&gt; sentence<br>
+    "Say, what's wrong with Donkey? I can hear him braying."<br>
+    <br>
+    &gt;&gt;&gt; sentence.find("donkey")<br>
+    -1<br>
+    <br>
+    Python is case sensitive. <br>
+    <br>
+    &gt;&gt;&gt; sentence.find("Donkey")<br>
+    23<br>
+    &gt;&gt;&gt; sentence[23]<br>
+    'D'<br>
+    <br>
+    <br>
+    &gt;&gt;&gt; sentence.replace("Donkey", "Wolfie")<br>
+    "Say, what's wrong with Wolfie? I can hear him braying?"<br>
+    <br>
+    Moo-Inator put down the phone. "Your boss is already dead."<br>
+    <b><br>
+      <br>
     </b><b>Advanced Array</b><br>
     <br>
     <br>
+    &gt;&gt;&gt; enemies = range(5)<br>
+    &gt;&gt;&gt; enemies<br>
+    [0, 1, 2, 3, 4]<br>
+    <br>
+    &gt;&gt;&gt; enemies[0]<br>
+    0<br>
+    &gt;&gt;&gt; len(enemies)<br>
+    5<br>
+    &gt;&gt;&gt; last = len(enemies)<br>
+    <br>
+    &gt;&gt;&gt; enemies[last]<br>
+    <br>
+    Traceback (most recent call last):<br>
+    &nbsp; File "&lt;pyshell#14&gt;", line 1, in &lt;module&gt;<br>
+    &nbsp;&nbsp;&nbsp; enemies[last]<br>
+    IndexError: list index out of range<br>
+    <br>
+    &gt;&gt;&gt; enemies[last - 1]<br>
+    4<br>
+    <br>
+    <br>
+    &gt;&gt;&gt; enemies[1:]<br>
+    [1, 2, 3, 4]<br>
+    &gt;&gt;&gt; enemies[0:]<br>
+    [0, 1, 2, 3, 4]<br>
+    &gt;&gt;&gt; enemies[:4]<br>
+    [0, 1, 2, 3]<br>
+    &gt;&gt;&gt; <br>
+    &gt;&gt;&gt; enemies[2:4]<br>
+    [2, 3]<br>
+    <br>
+    <br>
+    Now for something really cool:<br>
+    <br>
+    &gt;&gt;&gt; enemies[-1:]<br>
+    [4]<br>
+    &gt;&gt;&gt; enemies[:-1]<br>
+    [0, 1, 2, 3]<br>
+    <br>
+    &gt;&gt;&gt; enemies[1:-1]<br>
+    [1, 2, 3]<br>
+    <br>
+    Coming back to our sentence:<br>
+    <br>
+    &gt;&gt;&gt; sentence<br>
+    "Say, what's wrong with Donkey? I can hear him braying."<br>
+    <br>
+    &gt;&gt;&gt; sentence.find("Donkey")<br>
+    23<br>
+    &gt;&gt;&gt; sentence[23]<br>
+    'D'<br>
+    &gt;&gt;&gt; sentence[23:]<br>
+    'Donkey? I can hear him braying.'<br>
+    <br>
+    As we can see, strings work just like arrays.<br>
+    <br>
+    Dictionary<br>
+    <br>
+    Reach the top, find the thing computer code locked. Open up code
+    book<br>
+    <br>
+    There is a special kind of a list called a dictionary. A dictionary
+    has a key and a value. A bit like a normal dictionary. What does it
+    mean? Let's try an example. <br>
+    <br>
+    &gt;&gt;&gt; code_book = {'code 1':'password', 'code 2':'idontknow',
+    'code 3':'abcdef'}<br>
+    &gt;&gt;&gt; code_book<br>
+    {'code 1': 'password', 'code 3': 'abcdef', 'code 2': 'idontknow'}<br>
+    &gt;&gt;&gt; code_book['code 1']<br>
+    'password'<br>
+    &gt;&gt;&gt; <br>
+    <br>
+    The general format of a dictionary is:&nbsp; <br>
+    <br>
+    dict = { 'key 1': 'value 1', 'key 2': 'value 2'}<br>
+    <br>
+    Where key1 points to value1, and so on. Why would you want to do
+    that? There are cases when two things are linked, and you want to
+    store both of them together. A very common example is user names and
+    passwords.<br>
+    <br>
+    &gt;&gt;&gt; code_book = { 'user1':'pass1', 'user2':'pass2',
+    'user3':'pass3'}<br>
+    &gt;&gt;&gt; code_book<br>
+    {'user2': 'pass2', 'user3': 'pass3', 'user1': 'pass1'}<br>
+    <br>
+    Here, user 1 has the password pass1, user 2 has password pass2, and
+    so on. So if you want to see the password for user1, you would type:<br>
+    <br>
+    &gt;&gt;&gt; code_book['user1']<br>
+    'pass1'<br>
+    &gt;&gt;&gt; code_book['user3']<br>
+    'pass3'<br>
+    &gt;&gt;&gt; <br>
+    <br>
+    &gt;&gt;&gt; code_book['code 2']<br>
+    'idontknow'<br>
+    &gt;&gt;&gt; code_book['code 3']<br>
+    'abcdef'<br>
+    &gt;&gt;&gt; <br>
+    <br>
+    <br>
+    Conditions<br>
+    <br>
+    The if command allows you to run your code if only certain
+    conditions are fulfilled. Eg,<br>
+    <br>
+    &gt;&gt;&gt; number = 1<br>
+    &gt;&gt;&gt; if number == 1:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 1"<br>
+    &nbsp;&nbsp; <br>
+    Number is 1<br>
+    <br>
+    Thing to note: The difference between '=' and '=='.<br>
+    <br>
+    '=' says, this value equal to that. In the example above, number is
+    equal to 1.<br>
+    <br>
+    '==' does a comparison. It checks: Is this equal to that? In your
+    Python window, type this:<br>
+    <br>
+    &gt;&gt;&gt; 1 == 1<br>
+    True<br>
+    &gt;&gt;&gt; <br>
+    &gt;&gt;&gt; 1 == 2<br>
+    False<br>
+    <br>
+    '==' returns true of false, as we see above.<br>
+    <br>
+    The if command works by checking this condition. In our example, it
+    checks if number is equal to 1. Since it is the first time around,
+    it prints "Number is 1".<br>
+    <br>
+    The if command can also have an else command, that is run if the
+    condition isn't true:<br>
+    <br>
+    <br>
+    &gt;&gt;&gt; number = 2<br>
+    &gt;&gt;&gt; if number == 1:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 1"<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is not 1"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Number is not 1<br>
+    <br>
+    <br>
+    You can also have something called an else if, shortened to elif in
+    Python:<br>
+    <br>
+    &gt;&gt;&gt; if number == 1:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 1"<br>
+    elif number == 2:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 2"<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is not 1 or 2"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Number is 2<br>
+    <br>
+    <br>
+    Now, it checks the first condition. If it is not true, it checks the
+    second condition. If both aren't true, it will fall to the last
+    condition. Try the code with number = 3.<br>
+    <br>
+    &gt;&gt;&gt; number = 3<br>
+    &gt;&gt;&gt; if number == 1:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 1"<br>
+    elif number == 2:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is 2"<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp; print "Number is not 1 or 2"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Number is not 1 or 2<br>
+    <br>
+    <br>
+    <br>
+    &gt;&gt;&gt; enemy = "orc"<br>
+    &gt;&gt;&gt; if enemy == "orc":<br>
+    &nbsp;&nbsp;&nbsp; print "The power of pizza compels you!"<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp; print "Sorry, my mistake"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    The power of pizza compels you!<br>
+    &gt;&gt;&gt; enemy = "lawyer"<br>
+    &gt;&gt;&gt; if enemy == "orc":<br>
+    &nbsp;&nbsp;&nbsp; print "The power of pizza compels you!"<br>
+    else:<br>
+    &nbsp;&nbsp;&nbsp; print "Sorry, my mistake"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Sorry, my mistake.<br>
+    <br>
+    <br>
+    Now what do you do if you are surrounded by a bunch of enemies?
+    Create a list with random enemies thrown in:<br>
+    <br>
+    enemy = ["orc", "nerd", "lawyer", "nerd", "lawyer", "orc",
+    "secretary"]<br>
+    <br>
+    Make it random, just be sure to add a secreatary in there somewhere.
+    Now we need to loop over this list.<br>
+    <br>
+    for e in enemy:<br>
+    &nbsp;&nbsp;&nbsp; if e == "orc":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "The power of pizza
+    compels you!"<br>
+    <br>
+    The for loop must be familiar by now.&nbsp; The next line may
+    require an explanation. The for loop goes over each element in the
+    list, and calls it 'e' (in my example).<br>
+    <br>
+    It then checks: Is the current value equal to orc, and if it is, it
+    will print our message. Of course, we need to do this for all the
+    enemies. And don't forget the secretary- we don't want to kill her.
+    I will show you how to deal with her as well. Here is the complete
+    code:<br>
+    <br>
+    enemy = ["orc", "nerd", "lawyer", "nerd", "lawyer", "orc",
+    "secretary"]<br>
+    <br>
+    &gt;&gt;&gt; for e in enemy:<br>
+    &nbsp;&nbsp;&nbsp; if e == "orc":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "The power of pizza
+    compels you!"<br>
+    &nbsp;&nbsp;&nbsp; elif e =="nerd":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "I am a Master of Visual
+    Cobol dot Net!"<br>
+    &nbsp;&nbsp;&nbsp; elif e == "lawyer":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "No, I DO NOT agree to
+    your Terms and Conditions. I am a Lol Cat Fan!"<br>
+    &nbsp;&nbsp;&nbsp; else:<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "Sorry to bother you.
+    See ya!"<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+    The power of pizza compels you!<br>
+    I am a Master of Visual Cobol dot Net!<br>
+    No, I DO NOT agree to your Terms and Conditions. I am a Lol Cat Fan!<br>
+    I am a Master of Visual Cobol dot Net!<br>
+    No, I DO NOT agree to your Terms and Conditions. I am a Lol Cat Fan!<br>
+    The power of pizza compels you!<br>
+    Sorry to bother you. See ya!<br>
+    <br>
+    This is a good time to introduce functions. If you are going to
+    repeat a lot of code, it makes sense to put it in a function. This
+    makes your code easy to read and follow. So if you get bored of
+    fighting eemies, just call this function. Let's call it
+    Just_Deal_With_Them().<br>
+    <br>
+    def Just_Deal_With_Them(e):<br>
+    &nbsp;&nbsp;&nbsp; if e == "orc":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "The power of pizza
+    compels you!"<br>
+    &nbsp;&nbsp;&nbsp; elif e =="nerd":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "I am a Master of Visual
+    Cobol dot Net!"<br>
+    &nbsp;&nbsp;&nbsp; elif e == "lawyer":<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "No, I DO NOT agree to
+    your Terms and Conditions. I am a Lol Cat Fan!"<br>
+    &nbsp;&nbsp;&nbsp; else:<br>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; print "Sorry to bother you.
+    See ya!"<br>
+    <br>
+    def is the command that tells Python you are declaring a function.
+    Anything in the brackets () is what you are passing in; in this
+    case, the enemy name. To show how this function is used:<br>
+    <br>
+    &gt;&gt;&gt; for e in enemy:<br>
+    &nbsp;&nbsp;&nbsp; Just_Deal_With_Them(e)<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    The power of pizza compels you!<br>
+    I am a Master of Visual Cobol dot Net!<br>
+    No, I DO NOT agree to your Terms and Conditions. I am a Lol Cat Fan!<br>
+    I am a Master of Visual Cobol dot Net!<br>
+    No, I DO NOT agree to your Terms and Conditions. I am a Lol Cat Fan!<br>
+    The power of pizza compels you!<br>
+    Sorry to bother you. See ya!<br>
+    <br>
+    As you can see, the code is much simpler now. Let's see another
+    example. If you remember, we used the lower() and title() functions?
+    What if we get a list of names in ALL CAPS, and want to change them
+    to normal?<br>
+    <br>
+    &gt;&gt;&gt; def Normal_Case(name):<br>
+    &nbsp;&nbsp;&nbsp; return name.title()<br>
+    <br>
+    The new thing is the return- functions can return a value. In this
+    case, it takes a capital name, and returns the title version of it.
+    Try it out:<br>
+    <br>
+    &gt;&gt;&gt; Normal_Case("THIS IS A NAME IN ALL CAPS")<br>
+    'This Is A Name In All Caps'<br>
+    <br>
+    How do we use this in practice? Say we have a list of names in all
+    caps, and we want to copy the names to a new list:<br>
+    <br>
+    &gt;&gt;&gt; names = ["JOHN", "BARRY", "SOMEGUY"]<br>
+    &gt;&gt;&gt; names_small = []<br>
+    &gt;&gt;&gt; <br>
+    &gt;&gt;&gt; for n in names:<br>
+    &nbsp;&nbsp;&nbsp; names_small.append(Normal_Case(n))<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    &gt;&gt;&gt; print names_small<br>
+    ['John', 'Barry', 'Someguy']<br>
+    <br>
+    We declare an empty list called names_small. We then loop over the
+    names. This line requires an explanations:<br>
+    &nbsp;&nbsp; names_small.append(Normal_Case(n))<br>
+    <br>
+    We are calling a function within a function. append() is a function
+    that adds values to a Python list. In that, we are calling our own
+    function Normal_Case. Normal_Case returns the normal version of the
+    names, which are pased to names_small.append(), which adds the names
+    to the list. The final result is, we get a new list with our names
+    fixed.<br>
+    Defeating all the nerds and orcs stopping your way, you make it to
+    the top, to find the door is blocked by a code. (Dict code here).<br>
+    <br>
+    ----<br>
+    <br>
+    &lt;goto iceland. just when about to throw stapler, Doogynator turns
+    up and attacks. Moo injured, gives you BFG 9000 Elder Wand (Made in
+    China). Doogy fires attacks at you.<br>
+    <br>
+    <br>
+    The Doggy-Inator starts firing attacks at you. <br>
+    <br>
+    &gt;&gt;&gt; doggy_attacks = [10, 10, 20, 7, 30]<br>
+    &gt;&gt;&gt; your_health = 100<br>
+    <br>
+    doggy_attacks is a list which contains the amount of damage his
+    attacks will do to you. You start off with a health of 100.<br>
+    <br>
+    &gt;&gt;&gt; print "Your health is %d" % (your_health)<br>
+    Your health is 100<br>
+    <br>
+    This is a form of the print statement. "%d" tells that you want to
+    print a decimal (or a number). After the % symbol, you give the
+    actual number you want to print. The most common symbols are %d for
+    numbers and %s for strings. Another example:<br>
+    <br>
+    &gt;&gt;&gt; print "Mr %s is %d years old" % ("Jack", 21)<br>
+    Mr Jack is 21 years old<br>
+    <br>
+    Anyway, so the Doggy-Nator fires his attacks at you:<br>
+    <br>
+    &gt;&gt;&gt; doggy_attacks = [10, 10, 20, 7, 30]<br>
+    &gt;&gt;&gt; print "Your health is %d" % (your_health)<br>
+    Your health is 100<br>
+    &gt;&gt;&gt; <br>
+    &gt;&gt;&gt; for d in doggy_attacks:<br>
+    &nbsp;&nbsp;&nbsp; your_health -= d<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    &gt;&gt;&gt; print "Your health is %d" % (your_health)<br>
+    Your health is 23<br>
+    <br>
+    your_health -= d <br>
+    <br>
+    The -= command means, subtract the value, and store it in the
+    current variable. So this line means, take your current health, and
+    subtract d (where d is the damage) from it. The overall effect is,
+    your health goes down each time. To understand this better, print
+    out your health each time:<br>
+    <br>
+    &gt;&gt;&gt; your_health = 100<br>
+    &gt;&gt;&gt; for d in doggy_attacks:<br>
+    &nbsp;&nbsp;&nbsp; your_health -= d<br>
+    &nbsp;&nbsp;&nbsp; print "After getting damage %d, your health falls
+    to %d" % (d, your_health)<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    After getting damage 10, your health falls to 90<br>
+    After getting damage 10, your health falls to 80<br>
+    After getting damage 20, your health falls to 60<br>
+    After getting damage 7, your health falls to 53<br>
+    After getting damage 30, your health falls to 23<br>
+    <br>
+    <br>
+    Oh oh. You just lost 77% of your health. You can't survive like this
+    for long. Luckily, you are wearing Plot Armor. For those of you who
+    don't know what this is, Plot Armor is special protection the writer
+    of the book/movie gives to the hero, so the hero always survives any
+    blast, or a thousand bullets fired at him. That's why the Storm
+    Troopers can fire a thousand bullets at Skywalker, and still miss.
+    The real truth is, they didn't miss; he was wearing Plot Armor. Just
+    like you are now. So instead of you, the Moo-Inator is hurt.<br>
+    <br>
+    "No!" you cry out. "Please don't die."<br>
+    <br>
+    "Don't worry. According to the script, I don't die until scene 57."
+    <br>
+    <br>
+    He gives you his super secret weapon, the BFG 9000 Elder Wand (Made
+    in China). "Use this, it will cancel out Doggy-Inators attacks."<br>
+    <br>
+    Now we will come to one of the most powerful techniques in Python:
+    List Comprehension. First, you need to weaken the Doggy's attacks,
+    using your BFG thingy.<br>
+    <br>
+    &gt;&gt;&gt; weak_attacks = []<br>
+    &gt;&gt;&gt; for d in doggy_attacks:<br>
+    &nbsp;&nbsp;&nbsp; weak_attacks.append(d / 10)<br>
+    <br>
+    We have created a new variable with the weakened attacks,
+    imaginatively called weak_attacks.<br>
+    <br>
+    &gt;&gt;&gt; doggy_attacks<br>
+    [10, 10, 20, 7, 30]<br>
+    &gt;&gt;&gt; weak_attacks<br>
+    [1, 1, 2, 0, 3]<br>
+    &nbsp;&nbsp;&nbsp; <br>
+    Now, let's see what happens when the Doggy-Inator attacks us.<br>
+    <br>
+    &gt;&gt;&gt; for weaken in weak_attacks:<br>
+    &nbsp;&nbsp;&nbsp; your_health -= weaken<br>
+    <br>
+    &gt;&gt;&gt; print "Your health is %d" % (your_health)<br>
+    Your health is 93<br>
+    <br>
+    See what we did? We created a variable weaken, and used it to weaken
+    the Doggy-Inator's attacks ten times. So instead of causing us 77%
+    damage, they only caused us 7%.<br>
+    <br>
+    The key thing was that we ran a separate for loop to reduce the
+    power of the attacks. Specifically, this one:<br>
+    <br>
+    &gt;&gt;&gt; for d in doggy_attacks:<br>
+    &nbsp;&nbsp;&nbsp; weak_attacks.append(d / 10)<br>
+    <br>
+    Python gives us a very powerful method to do this is a single line,
+    called list comprehension.<br>
+    <br>
+    &gt;&gt;&gt; weak_attacks = [x / 10 for x in doggy_attacks]<br>
+    &gt;&gt;&gt; weak_attacks<br>
+    [1, 1, 2, 0, 3]<br>
+    <br>
+    This will require some explanation. List comprehensions are used
+    when we are working with lists. One of the most common tasks is to
+    take a list, do something with it, and create a new list. Because
+    this is so common, an easy way to do this was created, rather than
+    having to loop all the time.<br>
+    <br>
+    [x / 10 for x in doggy_attacks]<br>
+    <br>
+    This is the whole instruction. First, as you may know, lists are
+    created by using the [] brackets. But in this case, we have put
+    instructions in the [ ].<br>
+    <br>
+    The simplest way to understand list comprehension is, <br>
+    <br>
+    [ &lt;instruction&gt;&nbsp; for variable in list]<br>
+    <br>
+    Python will automatically loop over the list, and run the
+    &lt;instruction&gt; each time. In our example:<br>
+    <br>
+    [x / 10 <b>for x in doggy_attacks</b>]<br>
+    <br>
+    First, it will loop over doggy_attacks, and use the variable x.<br>
+    <br>
+    [<b>x / 10</b> for x in doggy_attacks]<br>
+    <br>
+    The instruction here is x / 10. So that for each variable in the
+    list, Python will divide it by 10. Since the whole command is
+    in&nbsp; [ ], it will automatically create a list for you. Which is
+    why<br>
+    <br>
+    &gt;&gt;&gt; weak_attacks = [x / 10 for x in doggy_attacks]<br>
+    &gt;&gt;&gt; weak_attacks<br>
+    [1, 1, 2, 0, 3]<br>
+    <br>
+    <br>
+    returns a list.<br>
+    <br>
+    <br>
+    ---<br>
+    <br>
+    Battle going with Doggy-Nator, but he cancelling your attacks. Way
+    to beat him is to use the magic words, "Ipso facto Deus Ex Machinia,
+    Attack number 21!!", but the Doggy-Inator won't let you finish your
+    sentences, as he cancels your attack. 21 is the secret number, the
+    Dues Ex weakness you fond out using your special Chosen One powers.
+    Here is a function to defeat the Doggy:<br>
+    <br>
+    &gt;&gt;&gt; def super_attack(secret_number):<br>
+    &nbsp;&nbsp;&nbsp; print "Begin Super secret attack!"<br>
+    &nbsp;&nbsp;&nbsp; print "Ipso facto Deus Ex Machinia, Attack number
+    %d!" % (secret_number)<br>
+    <br>
+    &nbsp;&nbsp;&nbsp; <br>
+    &gt;&gt;&gt; super_attack(21)<br>
+    Begin Super secret attack!<br>
+    Ipso facto Deus Ex Machinia, Attack number 21!<br>
+    <br>
+    All you need to do is call the function super_attack with 21, and
+    that will defeat the enemy. If only the Doggy-Inator would let you.<br>
+    <br>
+    The last topic we will study is another very powerful and cool one.
+    Python allows you to create code in real time. Here's how.<br>
+    <br>
+    The Doggy-Inator won't allow you to say&nbsp; "Ipso facto Deus Ex
+    Machinia, Attack number 21!" How about if we trick it?<br>
+    <br>
+    <br>
+    We will assemble our secret attack in (no surprise), secret.<br>
+    <br>
+    &gt;&gt;&gt; a = "super"<br>
+    &gt;&gt;&gt; b = "_"<br>
+    &gt;&gt;&gt; c = "attack("<br>
+    &gt;&gt;&gt; secret_number = 21<br>
+    &gt;&gt;&gt; d= str(secret_number)<br>
+    &gt;&gt;&gt; e = ")"<br>
+    &gt;&gt;&gt; <br>
+    &gt;&gt;&gt; secret_command = a + b +c +d +e<br>
+    &gt;&gt;&gt; print secret_command<br>
+    super_attack(21)<br>
+    <br>
+    Okay, some recap. As you may remember, we can add strings with a +.<br>
+    <br>
+    &gt;&gt;&gt; print "Hello" + "World"<br>
+    HelloWorld<br>
+    <br>
+    The only other thing you may not know is the str() function. It
+    takes a number, and converts it to a string.<br>
+    <br>
+    &gt;&gt;&gt; str(21)<br>
+    '21'<br>
+    <br>
+    The final effect is that the string secret_command contains the
+    secret function we must call. But how do we call it? If we try to
+    call it directly, the Doggy-Inator cancels our attack?<br>
+    <br>
+    &gt;&gt;&gt; print secret_command<br>
+    super_attack(21)<br>
+    &gt;&gt;&gt; eval(secret_command)<br>
+    Begin Super secret attack!<br>
+    Ipso facto Deus Ex Machinia, Attack number 21!<br>
+    <br>
+    The eval is one of the coolest commands in Python, as it allows you
+    to create a Python command at run time. You pass it a string, and
+    eval will run it like a Python command.<br>
+    <br>
+    &gt;&gt;&gt; a = 10<br>
+    <br>
+    &gt;&gt;&gt; eval("a * 2")<br>
+    20<br>
+    <br>
+    <br>
+    In our example, we created&nbsp; a string that contains our
+    function.<br>
+    <br>
+    &gt;&gt;&gt; secret_command = a + b +c +d +e<br>
+    &gt;&gt;&gt; print secret_command<br>
+    super_attack(21)<br>
+    <br>
+    Now we run this command using the eval function. It will call the
+    function super_attack(21) for us.<br>
+    <br>
+    &gt;&gt;&gt; eval(secret_command)<br>
+    Begin Super secret attack!<br>
+    Ipso facto Deus Ex Machinia, Attack number 21!<br>
+    <br>
+    <br>
+    And there we go! Enemy defeated.<br>
   </body>
 </html>
